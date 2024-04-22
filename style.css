@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Light Theme */
+:root {
+  --background: #dfdfdf;
+  --primary-main: #02438d;
+  --primary-light: #1263c0;
+  --primary-contrastText: white;
+  --text: #111;
+  --paper: white;
+}
+
+/*  Dark Theme
+:root {
+  --background: #111;
+  --primary-main: rgb(0, 126, 126);
+  --primary-light: rgb(27, 85, 85);
+  --primary-contrastText: white;
+  --text: white;
+  --paper: #222;
+}
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  background-image: url("pattern.png");
+  color: var(--text);
+}
+
+#container {
+  margin: 0 auto 2em auto;
+  max-width: 1000px;
+  display: flex;
+}
+
+/* left side */
+
+aside {
+  background-color: var(--primary-main);
+  color: var(--primary-contrastText);
+  min-width: 250px;
+  padding: 1em;
+}
+
+.center {
+  text-align: center;
+}
+
+#avatar {
+  max-width: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+h1 span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+aside .contact {
+  font-size: 0.9em;
+  list-style-type: none;
+  padding: 0;
+  line-height: 2em;
+}
+
+.contact li a {
+  color: var(--primary-contrastText);
+  text-decoration: none;
+}
+
+.contact li a:hover {
+  text-decoration: underline;
+}
+
+.skills {
+  padding: 0;
+  list-style-type: none;
+}
+
+.skills li {
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills li[class^='grade']:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: var(--primary-light);
+}
+
+.grade1:after {
+  width: 20%;
+}
+
+.grade2:after {
+  width: 40%;
+}
+
+.grade3:after {
+  width: 60%;
+}
+
+.grade4:after {
+  width: 80%;
+}
+
+.grade5:after {
+  width: 100%;
+}
+
+/* right side */
+main {
+  background-color: var(--paper);
+  padding: 1em;
+}
+
+main h2 {
+  color: var(--primary-main);
+  border-bottom: solid thin var(--primary-main);
+}
+
+main ul {
+  padding-left: 1em;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper span:first-child {
+  flex-grow: 1;
+}
+
+.wrapper p {
+  margin: 0;
+}
+
+.expitem {
+  margin-bottom: 1.5em;
+}
+
+.expitem p {
+  margin-top: 0;
+}
+
+.expitem ul {
+  margin: 0;
+}
+
+
+.row {
+  display: flex;
+}
+
+.row p {
+  flex: 1;
+  padding-right: 1.5em;
+  hyphens: auto;
+  margin-top: 0;
+}
+
+.row p b {
+  hyphens: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #container {
+    display: block;
+  }
+
+  aside,
+  main {
+    width: 100%;
+  }
+
+  .wrapper {
+    flex-direction: column;
+
+  }
+
+
+  .row {
+    display: block;
+  }
+
+
+}
